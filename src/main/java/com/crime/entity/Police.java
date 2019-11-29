@@ -1,9 +1,9 @@
 package com.crime.entity;
 
-public class PoliceStrengthPerYear {
+public class Police {
 
 	private String name;
-	private int totalStrength;
+	private int total;
 	private int year;
 	
 	public String getName() {
@@ -12,16 +12,16 @@ public class PoliceStrengthPerYear {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getTotalStrength() {
-		return totalStrength;
-	}
-	public void setTotalStrength(int totalStrength) {
-		this.totalStrength = totalStrength;
-	}
 	public int getYear() {
 		return year;
 	}
 	public void setYear(int year) {
 		this.year = year;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public void setTotal(int total) {
+		this.total = total;
 	}
 }

@@ -1,6 +1,6 @@
 package com.crime.entity;
 
-public class CrimeAgainstWandCPerYear {
+public class Crime {
 
 	private String name;
 	private int noCrime;
