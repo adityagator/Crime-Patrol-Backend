@@ -6,9 +6,9 @@ public class SummaryResult {
 
 	private String name;
 	private List<Crime> crimePerYear;
-	private List<Police> pspy;
-	private List<Police> pidpy;
-	private List<SolveRatePerYear> solveRate;
+	private List<Crime> pspy;
+	private List<Crime> pidpy;
+	private List<Crime> solveRate;
 	private List<Crime> cawpy;
 	private List<Crime> cacpy;
 	
@@ -24,22 +24,22 @@ public class SummaryResult {
 	public void setCrimePerYear(List<Crime> crimePerYear) {
 		this.crimePerYear = crimePerYear;
 	}
-	public List<Police> getPspy() {
+	public List<Crime> getPspy() {
 		return pspy;
 	}
-	public void setPspy(List<Police> pspy) {
+	public void setPspy(List<Crime> pspy) {
 		this.pspy = pspy;
 	}
-	public List<Police> getPidpy() {
+	public List<Crime> getPidpy() {
 		return pidpy;
 	}
-	public void setPidpy(List<Police> pidpy) {
+	public void setPidpy(List<Crime> pidpy) {
 		this.pidpy = pidpy;
 	}
-	public List<SolveRatePerYear> getSolveRate() {
+	public List<Crime> getSolveRate() {
 		return solveRate;
 	}
-	public void setSolveRate(List<SolveRatePerYear> solveRate) {
+	public void setSolveRate(List<Crime> solveRate) {
 		this.solveRate = solveRate;
 	}
 	public List<Crime> getCawpy() {

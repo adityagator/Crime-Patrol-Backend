@@ -2,17 +2,17 @@ package com.crime.entity;
 
 public class Crime {
 
-	private String name;
+	//private String name;
 	private int noCrime;
 	private int year;
-	private String against;
+	//private String against;
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public String getName() {
+//		return name;
+//	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 	
 	public int getYear() {
 		return year;
@@ -20,12 +20,12 @@ public class Crime {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public String getAgainst() {
-		return against;
-	}
-	public void setAgainst(String against) {
-		this.against = against;
-	}
+//	public String getAgainst() {
+//		return against;
+//	}
+//	public void setAgainst(String against) {
+//		this.against = against;
+//	}
 	public int getNoCrime() {
 		return noCrime;
 	}
