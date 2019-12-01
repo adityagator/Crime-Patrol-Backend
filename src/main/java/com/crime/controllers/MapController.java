@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.crime.constants.QueryConstants;
 import com.crime.dbConnection.ExecuteQueries;
 import com.crime.entity.Crime;
-import com.crime.entity.Police;
-import com.crime.entity.SolveRatePerYear;
 import com.crime.entity.SummaryResult;
 
 @RestController
@@ -54,6 +52,19 @@ public class MapController {
 		st.setSolveRate(listSolve);
 
 		return st;
+	}
+	
+	@RequestMapping("/map/{state}/{crime}")
+	public List<Crime> summary(@PathVariable("state") String state, @PathVariable("crime") String crime) {
+		List<Crime> listTcpy = new ArrayList<Crime>();
+
+		if (state.equalsIgnoreCase("India")) {
+			listTcpy = eq.getTotalCrimeAgainstWandC(crime, QueryConstants.INDIA_CRIME_GROUP_QUERY);
+		} else {
+			listTcpy = eq.getTotalCrimeAgainstWandC(state, crime, QueryConstants.CRIME_GROUP_QUERY);
+		}
+
+		return listTcpy;
 	}
 
 	// testing purposes only

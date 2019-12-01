@@ -13,4 +13,7 @@ public final class QueryConstants {
 	public static final String TOTAL_SOLVE_RATE_PER_YEAR_QUERY = "";
 	public static final String TOTAL_POLICE_DEATHS_PER_YEAR_QUERY = "SELECT s.name, c.year, SUM(c.num_injured+c.num_killed) FROM police_casualties c, state s WHERE c.s_id = s.s_id AND s.name = ? GROUP BY s.name, c.year";
 	
+	public static final String CRIME_GROUP_QUERY = "SELECT s.name, c.year, SUM(no_of_crime) FROM crime c, state s, crime_group cg WHERE c.s_id = s.s_id AND s.name = ? AND cg.cg_id = c.cg_id AND cg.group_name = ? GROUP BY s.name, c.year";
+	public static final String INDIA_CRIME_GROUP_QUERY = "SELECT c.year, SUM(no_of_crime) FROM crime c, crime_group cg WHERE cg.cg_id = c.cg_id AND cg.group_name = ? GROUP BY c.year";
+	
 }
