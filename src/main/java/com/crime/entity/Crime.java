@@ -2,17 +2,8 @@ package com.crime.entity;
 
 public class Crime {
 
-	//private String name;
 	private int noCrime;
 	private int year;
-	//private String against;
-	
-//	public String getName() {
-//		return name;
-//	}
-//	public void setName(String name) {
-//		this.name = name;
-//	}
 	
 	public int getYear() {
 		return year;
