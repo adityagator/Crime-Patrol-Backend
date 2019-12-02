@@ -82,10 +82,10 @@ public class MapController {
 		List<String> top10List = new ArrayList<String>();
 		
 		highCrimeList = eq.execComplexQuery1(QueryConstants.COMPLEX_HIGHEST_CRIME_GROUP_QUERY);
-		jpList = eq.execComplexQuery2(QueryConstants.COMPLEX_HIGHEST_CRIME_GROUP_QUERY);
-		dcList = eq.execComplexQuery3(QueryConstants.COMPLEX_HIGHEST_CRIME_GROUP_QUERY);
-		psList = eq.execComplexQuery4(QueryConstants.COMPLEX_HIGHEST_CRIME_GROUP_QUERY);
-		top10List = eq.execComplexQuery5(QueryConstants.COMPLEX_HIGHEST_CRIME_GROUP_QUERY);
+		jpList = eq.execComplexQuery2(QueryConstants.COMPLEX_JUVIE);
+		dcList = eq.execComplexQuery3(QueryConstants.COMPLEX_DECREASE_CRIME);
+		psList = eq.execComplexQuery4(QueryConstants.COMPLEX_PRESENT_SUBLISTS);
+		top10List = eq.execComplexQuery5(QueryConstants.COMPLEX_TOP10);
 		
 		c.setCgList(highCrimeList);
 		c.setDc(dcList);

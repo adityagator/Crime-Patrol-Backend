@@ -123,24 +123,87 @@ public class ExecuteQueries {
 		return listPspy;
 	}
 
-	public List<JuviePercent> execComplexQuery2(String complexHighestCrimeGroupQuery) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<JuviePercent> execComplexQuery2(String query) {
+		List<JuviePercent> listPspy = new ArrayList<JuviePercent>();
+		try {
+			ps = DBconnection.getCon().prepareStatement(query);
+			//ps.setString(1, state);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				JuviePercent cawc = new JuviePercent();
+				cawc.setPercent(rs.getDouble(1));
+				cawc.setName(rs.getString(2));
+				cawc.setYear(rs.getInt(3));
+				
+				listPspy.add(cawc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listPspy;
 	}
 
-	public List<DecreaseCrime> execComplexQuery3(String complexHighestCrimeGroupQuery) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<DecreaseCrime> execComplexQuery3(String query) {
+		List<DecreaseCrime> listPspy = new ArrayList<DecreaseCrime>();
+		try {
+			ps = DBconnection.getCon().prepareStatement(query);
+			//ps.setString(1, state);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				DecreaseCrime cawc = new DecreaseCrime();
+				cawc.setName(rs.getString(1));
+				cawc.setFfy(rs.getInt(2));
+				cawc.setLfy(rs.getInt(3));
+				cawc.setPercentDecrease(rs.getDouble(4));
+				
+				listPspy.add(cawc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listPspy;
 	}
 
-	public List<PresentSublists> execComplexQuery4(String complexHighestCrimeGroupQuery) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PresentSublists> execComplexQuery4(String query) {
+		List<PresentSublists> listPspy = new ArrayList<PresentSublists>();
+		try {
+			ps = DBconnection.getCon().prepareStatement(query);
+			//ps.setString(1, state);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				PresentSublists cawc = new PresentSublists();
+				cawc.setName(rs.getString(1));
+				cawc.setCrimes(rs.getInt(2));
+				cawc.setCasualties(rs.getInt(3));
+				cawc.setRetirement(rs.getInt(4));
+				
+				listPspy.add(cawc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listPspy;
 	}
 
-	public List<String> execComplexQuery5(String complexHighestCrimeGroupQuery) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<String> execComplexQuery5(String query) {
+		List<String> listPspy = new ArrayList<String>();
+		try {
+			ps = DBconnection.getCon().prepareStatement(query);
+			//ps.setString(1, state);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				String cawc = rs.getString(1);
+				
+				listPspy.add(cawc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listPspy;
 	}
 	
 	//public List<Crime> get
